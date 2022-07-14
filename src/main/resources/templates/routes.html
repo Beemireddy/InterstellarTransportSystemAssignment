@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Interstellar Transport System</title>
+
+    <!--/*/ <th:block th:include="headers/head :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="headers/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(routes)}">
+        <h2>Routes</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Route Id</th>
+                <th>Planet Origin</th>
+                <th>Planet Destination</th>
+                <th>Distance</th>
+            </tr>
+            <tr th:each="route : ${routes}">
+                <td th:text="${route.routeId}">Route Id</td>
+                <td th:text="${route.source}">Planet Origin</td>
+                <td th:text="${route.destination}">Planet Destination</td>
+                <td th:text="${route.distance}">Distance</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

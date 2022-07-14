@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <!--/*/ <th:block th:include="headers/head :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="headers/header :: header"></th:block> /*/-->
+
+    <div class="row text-center">
+        <p class="lead">The graph below represents an interstellar transport system used by Earth&#39;s inhabitants in the year 2145. This service is required to provide a system that allows them to find the shortest path from point “A”, being Earth, through the galaxy to any of the planets represented by the other nodes.</p>
+    </div>
+
+    <div class="row text-center">
+        <img src="../../static/images/image.png"
+             th:src="@{/images/image.png}" class="img-rounded"/>
+    </div>
+
+</div>
+</body>
+</html>
